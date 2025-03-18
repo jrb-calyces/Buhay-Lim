@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio &trade;</title>
+    <link rel="shortcut icon" href="./buhayLim.jpg" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: Poppins;
+            src: url(./Font/Poppins-Bold.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-image: url(./computer1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Header section ----------------------- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color:  rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+
+            /* background-color: lightblue; */
+        }
+
+        header > .leftSide{
+            display: flex;
+            align-items: center;
+
+        }
+
+        header > .leftSide > .imageHolder{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: grey;
+            background-image: url(./buhayLim.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header > .leftSide > h1{
+            margin-left: 20px;
+        }
+
+        header > .rightSide {
+            display: flex;
+            align-items: center;
+        }
+
+        header > .rightSide > nav{
+            
+        }
+
+        header > .rightSide > nav > a{
+            text-decoration: none;
+            color: black;
+            padding: 8px 10px;
+            transition: .4s ease;
+            font-weight: bold;
+        }
+        header > .rightSide > nav > a:hover{
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        /*  -----------------------  Header section*/
+
+        main{
+
+        }
+
+        
+
+        main > .aboutUsHolder > .aboutUsContent{
+            display: flex;
+            padding: 20px 50px;
+            width: 80dvw;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            
+        }
+
+        main > .aboutUsHolder > h1{
+            font-size: 2.4em;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        main > .aboutUsHolder > .aboutUsContent > .rightSide{
+            width: 50%;
+            height: 80dvh;
+            /* background-color: lightblue; */
+
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding: 40px;
+
+        }
+
+        main > .aboutUsHolder > .aboutUsContent > .rightSide > .name{
+            font-size: 2.5em;
+            text-transform: uppercase;
+            text-align: left;
+            width: 100%;
+        }
+
+        main > .aboutUsHolder > .aboutUsContent > .rightSide > .content{
+            text-align: left;
+            width: 100%;
+            /* text-indent: 20px; */
+        }
+
+        main > .aboutUsHolder > .aboutUsContent > .leftSide{
+            width: 50%;
+            height: 80dvh;
+            /* background-color: lightgreen; */
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        main > .aboutUsHolder > .aboutUsContent > .leftSide > .imageHolder{
+            height: 40dvw;
+            width: 40dvw;
+            max-width: 400px;
+            max-height: 400px;
+            /* border-radius: 50%; */
+            border-radius: 10px;
+            background-color: grey;
+        }
+
+        .buttonHolder {
+            width: 100%;
+
+        }
+
+        .buttonHolder  button{
+            padding: 8px 10px;
+            margin-top: 20px;
+            border: none;
+            background-color: rgba(0,0,0,0.5);
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 0px;
+            transition: .4s ease;
+        }
+
+        .buttonHolder  button:hover{
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .projects{
+            padding: 20px;
+            width: 80dvw;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            margin : 20px auto;
+            border-radius: 10px;
+
+        }
+
+        .projects > h1{
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .projectBox{
+            width: 300px;
+            height: 400px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+            border: 1px solid rgba(0,0,0,0.05);
+            margin: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            /* padding: 10px; */
+        }
+
+        .projectBox > .imageHolder{
+            width: 100%;
+            height: 80%;
+            background: grey;
+            /* border-radius: 10px; */
+        }
+
+        .projectHolder{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+
+        .contactUS{
+            height: 90dvh;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            width: 80dvw;
+            margin: 0 auto;
+            border-radius: 10px;
+
+        }
+        .contactUS > h1{
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .contactUS > .contactUsContent{
+            display: flex;
+        }
+
+        .contactUS > .contactUsContent > .leftSide{
+            width: 50%;
+            height: 90dvh;
+            /* background-color: lightgreen; */
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contactUS > .contactUsContent > .leftSide > iframe{
+            width: 50%;
+            aspect-ratio: 1;
+            background-color: grey;
+        }
+
+        .contactUS > .contactUsContent > .rightSide{
+            width: 50%;
+            height: 90dvh;
+            /* background-color: lightgreen; */
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* .contactUS > .contactUsContent > .rightSide > h1{
+            width: 100%;
+            text-align: left;
+        } */
+
+        .contactUS > .contactUsContent > .rightSide > form{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            max-width: 400px;
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = email],
+        .contactUS > .contactUsContent > .rightSide > form textarea {
+            padding: 8px 10px;
+            border: none;
+            /* border-bottom: 2px solid red; */
+            background: rgba(128, 128, 128, 0.224);
+
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = email]:focus,
+        .contactUS > .contactUsContent > .rightSide > form textarea:focus{
+            border: 2px solid lightblue;
+            outline: none;
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = submit]{
+            background-color: rgba(0,0,0,0.3);
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 8px 10px;
+            margin-top: 20px;
+            border: none;
+            background-color: rgba(129, 212, 239, 0.567);
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = submit]:hover{
+            background-color: rgba(129, 211, 239, 0.833);
+            color: white;
+        }
+
+        textarea{
+            height: 200px
+        }
+
+        .others > h1{
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .youtube{
+            width: max-content;
+            margin: 0 auto;
+            padding: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .imageMap{
+            width: max-content;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+        }
+
+        .tableSection{
+            width: max-content;
+            margin: 0 auto;
+        }
+
+        table{
+            text-align: left;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            border-radius: 10px;;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+
+            /* max-width: 400px; */
+        }
+
+
+        table th, table td{
+            padding: 10px;
+            width: 50%;
+        }
+
+        table th{
+            font-weight: bold;
+        }
+
+        table caption{
+            text-transform: uppercase;
+            font-size: 2.5em;
+            color: white;
+        }
+
+        .entities{
+            width: 400px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;;
+        }
+
+        #buhayPP{
+            background-image: url(./BUHAY.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        #limPP{
+            background-image: url(./grace.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #pic1 {
+            background-image: url(./Buhay/pic1.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #pic2 {
+            background-image: url(./Buhay/pic2.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #pic3 {
+            background-image: url(./Buhay/pic3.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #pic4 {
+            background-image: url(./Buhay/pic4.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .imageMap{
+            width: 100%;
+            overflow-x: scroll;
+        }
+
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="leftSide">
+            <div class="imageHolder"></div>
+            <h1>Portfolio</h1>
+        </div>
+        <div class="rightSide">
+            <nav>
+                <a href="#aboutUs">About US</a>
+                <a href="#contactUS">Contact US</a>
+                <a href="#projects">Projects US</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="aboutUsHolder" id="aboutUs">
+            <div class="aboutUsContent">
+                <div class="leftSide">
+                    <div class="imageHolder" id="buhayPP"></div>
+                </div>
+                <div class="rightSide">
+                    <h1 class="name">Joshrein Buhay</h1>
+                    <article class="content">
+                        I'm an IT student studying at Cebu Eastern College Inc.
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="tableSection" id="table1">
+            <table>
+                <caption>About Me</caption>
+                <tr>
+                    <th>Name</th>
+                    <td>Buhay, Joshrein Rion</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>Cebu City</td>
+                </tr>
+                <tr>
+                    <th>Hobbies</th>
+                    <td>
+                        <ul>
+                            <li>Online Games</li>
+                            <li>Music</li>
+                            <li>Guitar</li>
+                        </ul>
+                    </td>
+                </tr>
+                
+                
+                
+            </table>
+        </section>
+
+        <section class="aboutUsHolder" id="aboutUs">
+            
+            <div class="aboutUsContent">
+                <div class="rightSide">
+                    <h1 class="name">Grachelle Anne Lim</h1>
+                    <article class="content">
+                       A BSIT student, whose passionate about computers.
+                    </article>
+                    
+                </div>
+
+                <div class="leftSide">
+                    <div class="imageHolder" id="limPP"></div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="tableSection" id="table2">
+            <table>
+                <caption>About Me</caption>
+                <tr>
+                    <th>Name</th>
+                    <td>Lim, Grachelle Anne</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>Cebu City</td>
+                </tr>
+                <tr>
+                    <th>Hobbies</th>
+                    <td>
+                        <ul>
+                            <li>Playing volleyball</li>
+                            <li>Love listening to music</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="projects" id="projects">
+            <h1>Projects</h1>
+            <div class="projectHolder">
+                <div class="projectBox">
+                    <div class="imageHolder" id="pic1"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #1</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder" id="pic2"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #2</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder" id="pic3"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #3</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder" id="pic4"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #4</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #5</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #6</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #7</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #8</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #9</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+                <div class="projectBox">
+                    <div class="imageHolder"></div>
+                    <div class="descriptionHolder">
+                        <h2>Project #10</h2>
+                        <p>Project Description Goes here....</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="others" id="others">
+            <h1>Others</h1>
+            
+            <aside class="youtube">
+                <h2>Youtube</h2>
+                
+                <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/d86ws7mQYIg">
+                </iframe>
+            </aside>
+
+            <aside class="imageMap">
+                <h1>Image Map</h1>
+                <img src="computer.jpg" usemap="#image_map">
+                <map name="image_map">
+                  <area alt="Monitor" title="Monitor" href="https://i.etsystatic.com/19742235/r/il/886373/3023730376/il_1588xN.3023730376_jxun.jpg" coords="246,301 1223,212 1212,730 335,906 310,701 " shape="polygon">
+                  <area alt="System Unit" title="System Unit" href="https://img.freepik.com/premium-photo/concept-new-generation-computer-system-unit-model3d-illustration_76964-1813.jpg" coords="1319,205 1600,174 1999,297 1938,1013 1653,1096 1374,874 1385,808 1292,646 1294,637 " shape="polygon">
+                  <area alt="Keyboard" title="Keyboard" href="https://i.etsystatic.com/31670301/r/il/4717f0/3679601942/il_1588xN.3679601942_j6rr.jpg" coords="422,1223 1134,1046 1301,1274 509,1502 457,1340 " shape="polygon">
+                  <area alt="Mouse" title="Mouse" href="https://m.media-amazon.com/images/I/61QY3V6A-NL._AC_SL1500_.jpg" coords="1317,1066 1388,1046 1447,1084 1468,1151 1440,1180 1388,1167 1322,1102 1328,1102 " shape="polygon">
+                </map>
+                
+            </aside>
+
+            <aside class="entities">
+                <h2>Reserved Entities</h2>
+                <p>&lt; &gt; &amp;</p>
+                <h2>Symbol Entities</h2>
+                <p>&pound; &yen; &sect;</p>
+                <h2>Emoji</h2>
+                <p>&#128516; &#128517; &#128518;</p>
+            </aside>
+        </section>
+
+        <section class="contactUS" id="contactUS">
+            <h1>Contact Us</h1>
+            <div class="contactUsContent">
+                <div class="leftSide">
+                    <h1>University Map</h1>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.5917811999016!2d123.89343661110274!3d10.294438167855668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfcc60d650d%3A0x5ee73506c68dd233!2sCebu%20Eastern%20College%20Cebu%20city!5e0!3m2!1sen!2sph!4v1742160366088!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="rightSide">
+                    <h1>Any Questions in Mind?</h1>
+
+                    <form action="#">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter email" required autocomplete="off" >
+
+                        <label for="messageContent">Message</label>
+                        <textarea name="messageContent" id="messageContent" placeholder="Enter Message here" required></textarea>
+
+                        <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            
+
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 All Rights Reserved &bullet; Buhay &amp; Lim
+    </footer>
+</body>
+</html>
